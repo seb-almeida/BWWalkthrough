@@ -186,7 +186,7 @@ At the moment it's only used to perform custom animations on didScroll.
         if page < controllers.count{
             var frame = scrollview.frame
             frame.origin.x = CGFloat(page) * frame.size.width
-            scrollview.scrollRectToVisible(frame, animated: true)
+            scrollview.setContentOffset(frame.origin, animated: true)
         }
     }
     
